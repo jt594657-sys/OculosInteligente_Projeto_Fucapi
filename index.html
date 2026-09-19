@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobreposição HUD Futurista</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Simulação dos objetos no espaço 3D/Ambiente -->
+    <div class="world-view">
+        <div class="world-object obj-1">[OBJETO_01: MESA]</div>
+        <div class="world-object obj-2">[OBJETO_02: PORTA]</div>
+        <div class="world-object obj-3">[OBJETO_03: MONITOR]</div>
+    </div>
+    <!-- Efeitos Visuais de Sobreposição -->
+    <div class="glasses-overlay"></div>
+    <div class="scanlines"></div>
+
+    <!-- Interface Principal do HUD -->
+    <main class="hud-container" id="hud">
+        <!-- Cabeçalho -->
+        <header class="hud-header">
+            <div>
+                <span class="brand-title">CYBER_VISION v2.5</span>
+                <span class="battery-status">BAT: 88%</span>
+            </div>
+            <div class="compass">
+                <span>O</span>
+                <span>NO</span>
+                <span class="compass-active">N</span>
+                <span>NE</span>
+                <span>L</span>
+            </div>
+            <div class="status-badge" id="mode-status">SISTEMA ATIVO</div>
+        </header>
+
+        <!-- Painel Esquerdo -->
+        <section class="hud-left">
+            <div class="card">
+                <h3>Notificação</h3>
+                <p class="notif-title">Conexão Estabelecida</p>
+                <p class="notif-time">Há 2 minutos</p>
+            </div>
+            <div class="card">
+                <h3>Meio Ambiente</h3>
+                <p>Temperatura: 24°C</p>
+                <p>Qualidade do Ar: Boa</p>
+            </div>
+        </section>
+
+        <!-- Centro / Mira -->
+        <section class="hud-center">
+            <div class="reticle" id="reticle">
+                <div class="reticle-dot"></div>
+                <div class="object-tag" id="object-tag">ALVO: DESCONHECIDO</div>
+            </div>
+        </section>
+
+        <!-- Painel Direito -->
+        <section class="hud-right">
+            <div class="card">
+                <h3>Biometria</h3>
+                <p>BPM: <span id="bpm-val">72</span></p>
+                <p>Estresse: Baixo</p>
+            </div>
+        </section>
+
+        <!-- Rodapé -->
+        <footer class="hud-footer">
+            <div class="controls-hint">Pressione [Espaço] ou [N] para alternar visão</div>
+            <div id="clock">00:00:00</div>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
